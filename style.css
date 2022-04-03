@@ -30,3 +30,8 @@ h4{
 .modal-body {
     font-size: medium;
 }
+
+canvas{
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 10px;
+}
