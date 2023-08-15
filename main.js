@@ -1,3 +1,6 @@
+wristX="";
+wristY="";
+rwScore="";
 
 /*created by prashant shukla */
 
@@ -34,9 +37,21 @@ function modelLoaded() {
   
   }
 
+  function gotPoses(results) {
+    if(results.length>0) {
+      console.log(results);
+      wristX=results[0].pose.rightWrist.x;
+      wristY=results[0].pose.rightWrist.y;
+    }
+    }
+
 
 function draw(){
-
+if(rwScore>0.2) {
+  fill("#279eff")
+  stroke("#279eff")
+  circle(wristX,wristY,30)
+}
  background(0); 
 
  fill("black");
